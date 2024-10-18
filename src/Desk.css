@@ -1,0 +1,116 @@
+#desk {
+    margin-top: 4rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid #000; */
+    background: #DDF;
+    position: relative;
+    padding-top: 5rem;
+}
+.row {
+    display: flex;
+}
+#desk .row {
+    align-items: center;
+}
+.col {
+    flex-basis: 50%;
+}
+
+h2 {
+    text-align: center;
+}
+
+#turns {
+  font-size: 1.6rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  border: 1px solid #DDF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player1-desk {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 250px;
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+#player1-desk button {
+    padding: 0;
+    background-color: transparent;
+}
+#player1-desk img, #player2-desk img {
+    max-width: 200px;
+    display: block;
+}
+#player2-desk {
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 200px; */
+    margin-left: auto;
+    justify-content: right;
+    /* overflow: hidden; */
+}
+#player2-desk img {
+    transition: transform .5s ease-in-out;
+    transform:scaleX(-100%) translateX(-2rem);
+}
+#desk .row {
+    overflow: hidden;
+}
+
+#player2-desk.selected img {
+    transition: transform .5s ease-in-out;
+    transform:scaleX(-130%) scaleY(130%) translateX(.5rem);
+}
+
+#player1-desk button {
+    transition: transform .5s ease-in-out;
+    transform: translateX(-2rem);
+    position: relative;
+}
+
+#player1-desk li:first-child button.selected {
+    transform: scale(1.3) translateX(0) translateY(1rem) rotate(10deg);
+}
+#player1-desk li:last-child button.selected {
+    transform: scale(1.3) translateX(0) translateY(-1rem)  rotate(-5deg);
+}
+
+#player1-desk button.selected {
+    transition: transform .5s ease-in-out;
+    transform: scale(1.3) translateX(0);
+    z-index: 5;
+}
+
+#desk.disabled {
+    opacity: 1;
+}
+
+
+#winner {
+  position: absolute;
+  bottom: 3rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  transform: rotate(15deg);
+}
+
+#winner p {
+    line-height: 1;
+    text-align: center;
+}

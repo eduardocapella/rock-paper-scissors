@@ -1,0 +1,66 @@
+#score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 2rem;
+    width: 100%;
+}
+
+#score-numbers {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #FFF;
+    padding: .5rem 1.5rem;
+    border: 5px solid #DDF;
+}
+#score .player {
+    font-size: 2rem;
+	border: 5px solid #DDF;
+	font-weight: 400;
+	font-family: 'PT Sans', sans-serif !important;
+	background: #FFF;
+	padding: 1rem;
+	flex-grow: 0;
+	flex-shrink: 0;
+	transform: rotate(-5deg) translateY(1rem);
+	width: 280px;
+	text-align: center;
+	line-height: 1.2;
+	position: relative;
+
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#score .player.score-p2 {
+    transform: rotate(5deg) translateY(1rem);
+}
+
+/* h2#scoreTitle {
+} */
+#score span {
+    font-size: 4rem;
+    /* background-color: #f0f0f0; */
+    /* padding: .75rem 1rem; */
+}
+
+.winner::before {
+	display: block;
+	content: '';
+	width: 5rem;
+	height: 6rem;
+	background-image: url('/src/assets/trophy@0.5x.webp');
+	background-size: contain;
+	position: absolute;
+	bottom: 3.2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background-repeat: no-repeat;
+}
