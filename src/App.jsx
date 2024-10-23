@@ -49,7 +49,7 @@ function App() {
 	useEffect(() => {
 		if (winner === playerName) {
 			playVictorySound();
-		} else if (winnder === "Player 2") {
+		} else if (winner === "Player 2") {
 			playDefeatSound();
 		}
 	}, [winner]);
